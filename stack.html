@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack - Image Upload</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Stack (LIFO) - Image Upload</h1>
+
+    <div class="form-container">
+        <label for="stackSize">Enter Stack Size:</label>
+        <input type="number" id="stackSize" min="1" required>
+        <button class="animated-button" onclick="setStackSize()">Set Stack Size</button>
+    </div>
+
+    <div class="upload-container">
+        <input type="file" id="stackInput" multiple accept="image/*" disabled>
+        <button class="animated-button" onclick="pushToStack()" disabled>Push Image</button>
+        <button class="animated-button" onclick="popFromStack()" disabled>Pop Image</button>
+    </div>
+
+    <div id="stackImages" class="stack-images"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

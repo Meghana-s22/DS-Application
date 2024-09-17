@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue - Image Upload</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Queue (FIFO) - Image Upload</h1>
+
+    <label for="queueSize">Enter Queue Size:</label>
+    <input type="number" id="queueSize" min="1" required>
+    <button onclick="setQueueSize()">Set Queue Size</button>
+
+    <input type="file" id="queueInput" multiple accept="image/*" disabled>
+    <button onclick="enqueue()" disabled>Enqueue Image</button>
+    <button onclick="dequeue()" disabled>Dequeue Image</button>
+
+    <div id="queueImages"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
